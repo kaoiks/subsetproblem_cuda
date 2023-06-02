@@ -19,7 +19,7 @@ __global__ void subsetSumProblemCuda(int n, int* dataGlobal, int* solutionsFound
        int sub_sum = 0;
        for (int j = 0; j < n; ++j) {
            if ((1ULL << j) & i) {
-               sub_sum += dataGlobal[j];
+               sub_sum += data[j];
            }
        }
        if (sub_sum == sum) {
